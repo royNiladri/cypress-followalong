@@ -31,6 +31,21 @@ cy.get('@charsLeftSpan')
 ```
 Move common element aliasing to `beforeEach`. Also, we can move the base URL to `cypress.json` and use the path in tests.
 
-
+## Common Interactions
+- Double click
+```js
+cy.get('[data-cy="box-1-items-list"] > :nth-child(2)')
+    .dblclick();
+```
+- Checkbox
+```js
+cy.get('[data-cy="box-2-checkboxes"] > :nth-child(1) input')
+    .check();
+```
+- Dropdown selection
+```js
+cy.get('[data-cy="box-3-dropdown"]')
+    .select('Option Three');
+```
 ## Acknowledgements
 This repository is my follow along of the LinkedIn Learning course [End-to-End JavaScript Testing with Cypress.io](https://www.linkedin.com/learning/end-to-end-javascript-testing-with-cypress-io/) by [Shaun Wassell](https://www.linkedin.com/public-profile/in/shaun-wassell)
