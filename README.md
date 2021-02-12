@@ -30,3 +30,7 @@ cy.get('@charsLeftSpan')
     });
 ```
 Move common element aliasing to `beforeEach`. Also, we can move the base URL to `cypress.json` and use the path in tests.
+
+
+## Acknowledgements
+This repository is my follow along of the LinkedIn Learning course [End-to-End JavaScript Testing with Cypress.io](https://www.linkedin.com/learning/end-to-end-javascript-testing-with-cypress-io/) by [Shaun Wassell](https://www.linkedin.com/public-profile/in/shaun-wassell)
