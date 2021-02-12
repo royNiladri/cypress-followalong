@@ -36,4 +36,13 @@ describe('basic page interactions', () => {
             .invoke('text')
             .should('equal', 'Option Three');
     })
+
+    it('should display last mouseovered element', () => {
+        cy.get('[data-cy="box-4-items-list"] > :nth-child(2)')
+            .trigger('mouseover');
+
+            cy.get('[data-cy="box-4-selected-name"]')
+            .invoke('text')
+            .should('equal', 'Option Two');
+    })
 })

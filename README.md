@@ -47,5 +47,10 @@ cy.get('[data-cy="box-2-checkboxes"] > :nth-child(1) input')
 cy.get('[data-cy="box-3-dropdown"]')
     .select('Option Three');
 ```
+- Use trigger for more complicated interactions
+```js
+cy.get('[data-cy="box-4-items-list"] > :nth-child(2)')
+    .trigger('mouseover');
+```
 ## Acknowledgements
 This repository is my follow along of the LinkedIn Learning course [End-to-End JavaScript Testing with Cypress.io](https://www.linkedin.com/learning/end-to-end-javascript-testing-with-cypress-io/) by [Shaun Wassell](https://www.linkedin.com/public-profile/in/shaun-wassell)
