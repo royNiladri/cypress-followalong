@@ -52,5 +52,34 @@ cy.get('[data-cy="box-3-dropdown"]')
 cy.get('[data-cy="box-4-items-list"] > :nth-child(2)')
     .trigger('mouseover');
 ```
+For more details check out the [official docs](https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html#Actionability).
+
+## Assertions
+Check out the list of assertions from [official docs](https://docs.cypress.io/guides/references/assertions.html#Common-Assertions)
+
+## Automatic Retries
+Cypress keeps retrying failing command (not test) till they pass or a timeout occurs (default at 4s). This resolves problems around most flaky tests.
+
+## Debugging
+Since it is asynchronous, putting debugger between cypress commands will not have desired effect. Long hand method:
+```js
+cy.get('[data-cy="box-4-items-list"] > :nth-child(2)')
+    .trigger('mouseover')
+    .then(() => {
+        debugger;
+    });
+```
+Shorthand:
+```js
+cy.get('[data-cy="box-4-items-list"] > :nth-child(2)')
+    .trigger('mouseover')
+    .debug();
+```
+This also sets some variables in the console for easy access, like the `subject`.
+
+## Environment Variables
+Check out [official docs](https://docs.cypress.io/guides/guides/environment-variables.html#Setting).
+## Cypress Studio
+Checkout the [Studio](https://docs.cypress.io/guides/core-concepts/cypress-studio.html#Adding-a-New-Test) feature to interactively add tests.
 ## Acknowledgements
 This repository is my follow along of the LinkedIn Learning course [End-to-End JavaScript Testing with Cypress.io](https://www.linkedin.com/learning/end-to-end-javascript-testing-with-cypress-io/) by [Shaun Wassell](https://www.linkedin.com/public-profile/in/shaun-wassell)
