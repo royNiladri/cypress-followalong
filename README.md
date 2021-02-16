@@ -77,6 +77,9 @@ cy.get('[data-cy="box-4-items-list"] > :nth-child(2)')
 ```
 This also sets some variables in the console for easy access, like the `subject`.
 
+## Test Doubles
+Generally, use it sparingly as we most often want to test actual behaviour. Cypress wraps Sinon.js, and we can use `stub` and `spy` when needed.
+
 ## Environment Variables
 Check out [official docs](https://docs.cypress.io/guides/guides/environment-variables.html#Setting).
 ## Cypress Studio
